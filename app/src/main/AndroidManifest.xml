@@ -11,9 +11,7 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar">
-        </activity>
-
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Splash"
             android:noHistory="true"
@@ -25,6 +23,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".DaftarKelompok" />
+        <activity android:name=".BuatKelompok"></activity>
     </application>
 
 </manifest>
