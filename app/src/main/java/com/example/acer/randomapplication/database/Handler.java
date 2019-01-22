@@ -25,6 +25,7 @@ public class Handler extends SQLiteOpenHelper {
         sql = "CREATE TABLE tb_peserta " +
                 "( id INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 "nama TEXT, " +
+                "email TEXT, " +
                 "id_kelas INTEGER, "+
                 "FOREIGN KEY(id_kelas) REFERENCES tb_kelas(id) ON DELETE CASCADE  ) ";
         db.execSQL(sql);
