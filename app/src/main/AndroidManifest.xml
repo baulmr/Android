@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.acer.randomapplication">
-
+    3
     <application
         android:allowBackup="true"
         android:icon="@drawable/iconrandom"
@@ -14,25 +14,17 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Splash"
-            android:noHistory="true"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".deatilActivity"
-            android:label="@string/title_activity_deatil"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".BuatkelActivity"
-            android:label="@string/title_activity_buatkel"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity android:name=".DaftarKelompok" />
-        <activity android:name=".BuatKelompok"></activity>
+        <activity android:name=".DaftarPesertaActivity" />
+        <activity android:name=".LihatKelompokActivity" />
+        <activity android:name=".KelompokKelasActivity"></activity>
     </application>
 
 </manifest>

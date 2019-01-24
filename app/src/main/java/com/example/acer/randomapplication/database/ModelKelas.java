@@ -20,7 +20,7 @@ public class ModelKelas extends Handler {
 
         SQLiteDatabase db = this.getWritableDatabase();
 
-        String sql = "SELECT * FROM tb_peserta WHERE id_kelas = '"+ Integer.toString(id) +"'";
+        String sql = "SELECT * FROM tb_peserta WHERE id_kelas = "+ Integer.toString(id);
         int recordCount = db.rawQuery(sql, null).getCount();
         db.close();
 
