@@ -149,11 +149,15 @@ public class Kelas extends Fragment {
         Button tambah = (Button) view.findViewById(R.id.tambah);
         tambah.setOnClickListener(new tambahKelas());
 
-        this.v = view;
+        kelas = this;       this.v = view;
         load();
         return view;
     }
 
+    static Kelas kelas;
 
+    public static Kelas getInstance() {
+        return kelas;
+    }
 
 }

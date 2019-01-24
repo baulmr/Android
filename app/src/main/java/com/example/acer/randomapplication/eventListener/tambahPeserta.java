@@ -50,7 +50,8 @@ public class tambahPeserta implements View.OnClickListener {
 
                                 if(createSuccessful){
                                     Toast.makeText(context, "Berhasil menambahkan peserta.", Toast.LENGTH_SHORT).show();
-                                    ((DaftarPesertaActivity) context).load();
+                                    //((DaftarPesertaActivity) context).load();
+                                    DaftarPesertaActivity.getInstance().load();
                                 }else{
                                     Toast.makeText(context, "Gagal menambahkan kelas.", Toast.LENGTH_SHORT).show();
                                 }

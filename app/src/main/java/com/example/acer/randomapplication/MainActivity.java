@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-
+        setSupportActionBar(toolbar);
 
         if (savedInstanceState==null){
             fragment = new Kelas();
@@ -93,9 +93,11 @@ public class MainActivity extends AppCompatActivity
 
         if (id == R.id.nav_kelas) {
             fragment = new Kelas();
+            setTitle("Kelas");
             callfragment(fragment);
         } else if (id == R.id.nav_kelompok) {
             fragment = new Kelompok();
+            setTitle("Kelompok");
             callfragment(fragment);
         }
 

@@ -22,12 +22,15 @@ import java.util.List;
 public class DaftarPesertaActivity extends AppCompatActivity {
 
     int id_kelas;
+    static DaftarPesertaActivity dp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_daftar_peserta);
         setTitle("Kelas");
+
+        dp = this;
 
         Bundle b = getIntent().getExtras();
         id_kelas = b.getInt("id_kelas");
@@ -69,4 +72,13 @@ public class DaftarPesertaActivity extends AppCompatActivity {
         }
     }
 
+    public static DaftarPesertaActivity getInstance() {
+        return dp;
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Kelas.getInstance().load();
+    }
 }
