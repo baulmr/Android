@@ -28,7 +28,7 @@ public class DaftarPesertaActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_daftar_peserta);
-        setTitle("Kelas");
+        setTitle("Peserta");
 
         dp = this;
 

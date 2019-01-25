@@ -32,16 +32,6 @@ public class Kelompok extends Fragment {
 
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_kelompok, container, false);
-        ListView listView = (ListView) view.findViewById(R.id.ListKelompok);
-        final String[] items = new String[]{"Kelompok 1"," Kelompok 2"};
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, items);
-        listView.setAdapter(adapter);
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(getActivity().getApplicationContext(), items[1], Toast.LENGTH_SHORT).show();
-            }
-        });
         getActivity().setTitle("Kelompok");
         return view;
 
