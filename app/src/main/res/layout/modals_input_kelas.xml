@@ -12,7 +12,9 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:hint="Nama Kelas"
-        android:singleLine="true" >
+        android:singleLine="true"
+        android:textColor="@android:color/background_light"
+        android:textStyle="bold">
         <requestFocus />
     </EditText>
 

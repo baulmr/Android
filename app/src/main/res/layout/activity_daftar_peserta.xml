@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradient_bg"
     tools:context=".DaftarPesertaActivity">
 
     <LinearLayout
@@ -17,7 +18,10 @@
             android:id="@+id/tambah"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Add Peserta" />
+            android:background="@drawable/btn_bg"
+            android:text="Add Peserta"
+            android:textColor="@android:color/background_light"
+            android:textStyle="bold"/>
 
         <ScrollView
             android:layout_width="match_parent"

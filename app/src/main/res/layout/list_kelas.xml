@@ -12,30 +12,38 @@
         android:background="@drawable/custom_border"
         android:padding="13dp"
         android:layout_height="wrap_content">
+
         <LinearLayout
+            android:layout_width="189dp"
+            android:layout_height="wrap_content"
             android:layout_weight=".70"
-            android:layout_width="0dp"
-            android:orientation="vertical"
-            android:layout_height="wrap_content">
+            android:orientation="vertical">
+
             <TextView
-                android:layout_width="wrap_content"
                 android:id="@+id/nama"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
                 android:text="Nama Kelas"
-                android:textColor="#000000"
-                android:layout_height="wrap_content" />
+                android:textColor="#FFFFFF" />
+
             <TextView
-                android:layout_width="wrap_content"
-                android:text="0 Peserta"
                 android:id="@+id/jumlah_peserta"
-                android:layout_height="wrap_content" />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0 Peserta"
+                android:textColor="#FFFFFF"/>
         </LinearLayout>
+
         <Button
-            android:layout_width="wrap_content"
-            android:text="Pilihan"
             android:id="@+id/opsi"
+            android:layout_width="150dp"
+            android:layout_height="48dp"
+            android:background="@drawable/btn_bg"
+            android:text="Pilihan"
+            android:textColor="@android:color/background_light"
             android:textSize="10dp"
-            android:layout_height="wrap_content" />
+            android:textStyle="bold" />
 
     </LinearLayout>
 

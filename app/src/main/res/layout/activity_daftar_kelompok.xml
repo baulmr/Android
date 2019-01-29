@@ -24,7 +24,8 @@
 
         <ListView
             android:layout_width="match_parent"
-            android:layout_height="266dp" />
+            android:layout_height="266dp"
+            />
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
