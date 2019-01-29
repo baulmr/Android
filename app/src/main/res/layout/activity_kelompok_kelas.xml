@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".KelompokKelasActivity">
 
-<<<<<<< HEAD
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -34,6 +33,5 @@
             </LinearLayout>
         </ScrollView>
     </LinearLayout>
-=======
->>>>>>> eab183843e5415b524c68b8c4b967c7758798a10
+
 </android.support.constraint.ConstraintLayout>

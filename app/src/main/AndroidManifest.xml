@@ -24,6 +24,7 @@
         </activity>
         <activity android:name=".DaftarPesertaActivity" />
         <activity android:name=".LihatKelompokActivity" />
+        <activity android:name=".BuatKelompok" />
         <activity android:name=".KelompokKelasActivity"></activity>
     </application>
 

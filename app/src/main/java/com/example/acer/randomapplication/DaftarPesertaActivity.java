@@ -34,6 +34,7 @@ public class DaftarPesertaActivity extends AppCompatActivity {
 
         Bundle b = getIntent().getExtras();
         id_kelas = b.getInt("id_kelas");
+        setTitle("Daftar Peserta "+ b.getString("nama_kelas"));
 
         Button tambah = (Button) findViewById(R.id.tambah);
         tambah.setOnClickListener(new tambahPeserta(id_kelas));
@@ -68,7 +69,7 @@ public class DaftarPesertaActivity extends AppCompatActivity {
         }
 
         else {
-
+            linearLayoutRecords.addView(inflater.inflate(R.layout.list_kosong, null, false));
         }
     }
 

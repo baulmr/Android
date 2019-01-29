@@ -1,39 +1,23 @@
 package com.example.acer.randomapplication;
 
-
-<<<<<<< HEAD
-=======
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
->>>>>>> eab183843e5415b524c68b8c4b967c7758798a10
+
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-<<<<<<< HEAD
-import android.widget.ListView;
-import android.widget.Toast;
-
-import java.util.ArrayList;
-=======
 import android.widget.Button;
 import android.widget.LinearLayout;
-import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.example.acer.randomapplication.dataObject.DataKelompok;
 import com.example.acer.randomapplication.database.ModelKelompok;
-
-import java.util.ArrayList;
 import java.util.List;
->>>>>>> eab183843e5415b524c68b8c4b967c7758798a10
+
 
 
 /**
@@ -41,8 +25,6 @@ import java.util.List;
  */
 public class Kelompok extends Fragment {
 
-<<<<<<< HEAD
-=======
     View v;
     Context c;
 
@@ -91,14 +73,7 @@ public class Kelompok extends Fragment {
             }).show();
         }
     }
->>>>>>> eab183843e5415b524c68b8c4b967c7758798a10
 
-    public Kelompok() {
-        // Required empty public constructor
-    }
-
-<<<<<<< HEAD
-=======
     public void load(){
         LinearLayout linearLayoutRecords = (LinearLayout) v.findViewById(R.id.ListKelompok);
         LayoutInflater inflater = (LayoutInflater) c.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -128,10 +103,9 @@ public class Kelompok extends Fragment {
         }
 
         else {
-
+            linearLayoutRecords.addView(inflater.inflate(R.layout.list_kosong, null, false));
         }
     }
->>>>>>> eab183843e5415b524c68b8c4b967c7758798a10
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -139,15 +113,12 @@ public class Kelompok extends Fragment {
 
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_kelompok, container, false);
-        getActivity().setTitle("Kelompok");
-<<<<<<< HEAD
-=======
+        getActivity().setTitle("Semua Kelompok");
 
         this.v = view;
         this.c = view.getRootView().getContext();
         load();
 
->>>>>>> eab183843e5415b524c68b8c4b967c7758798a10
         return view;
 
 

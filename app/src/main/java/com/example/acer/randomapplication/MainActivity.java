@@ -97,7 +97,7 @@ public class MainActivity extends AppCompatActivity
             callfragment(fragment);
         } else if (id == R.id.nav_kelompok) {
             fragment = new Kelompok();
-            setTitle("Kelompok");
+            setTitle("Semua Kelompok");
             callfragment(fragment);
         }
 

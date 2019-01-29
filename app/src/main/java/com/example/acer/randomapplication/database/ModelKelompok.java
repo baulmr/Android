@@ -122,6 +122,7 @@ public class ModelKelompok extends Handler {
             ContentValues values = new ContentValues();
 
             values.put("id_peserta", obj.id_peserta);
+            values.put("no_urut", obj.no_urut);
             values.put("id_kelompok", id);
 
             add = add && db.insert("tb_peserta_kelompok", null, values) > 0;

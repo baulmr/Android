@@ -69,7 +69,7 @@ public class LihatKelompokActivity extends AppCompatActivity {
         for(int i=1, j = data.size() % jumlahRegu; i <= jumlahRegu; i++, j--){
             kelebihan = (j>0 ? 1 : 0);
 
-            View lists = inflater.inflate(R.layout.list_coba, null, false);
+            View lists = inflater.inflate(R.layout.list_lihatkel, null, false);
             TextView title = (TextView) lists.findViewById(R.id.title);
             title.setText("Kelompok ke-"+ i );
 
@@ -90,26 +90,30 @@ public class LihatKelompokActivity extends AppCompatActivity {
         LinearLayout linearLayoutRecords = (LinearLayout) findViewById(R.id.list);
         LayoutInflater inflater = (LayoutInflater) this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         linearLayoutRecords.removeAllViews();
-        int pos = 1;
+        int pos = 0;
         int panjangData = data.size();
         for(int i=1; i <= jumlahRegu; i++){
-            View lists = inflater.inflate(R.layout.list_coba, null, false);
+            View lists = inflater.inflate(R.layout.list_lihatkel, null, false);
             TextView title = (TextView) lists.findViewById(R.id.title);
             title.setText("Kelompok ke-"+ i );
             LinearLayout listPeserta = (LinearLayout) lists.findViewById(R.id.listNama);
-            pos -= 1;
-            for(int z = pos; z < panjangData-1; z++, pos++){
+
+            for(int z = pos; z < panjangData; z++, pos++){
+
                 if(data.get(z).no_urut != i)
                     break;
+
+
                 TextView item = new TextView(this);
                 item.setPadding(10, 10, 0, 0);
                 item.setText( data.get(z).nama );
                 listPeserta.addView(item);
+
+
             }
             linearLayoutRecords.addView(lists);
         }
     }
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
