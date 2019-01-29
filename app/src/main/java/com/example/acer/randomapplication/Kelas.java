@@ -28,6 +28,8 @@ import java.util.List;
 public class Kelas extends Fragment {
     View v;
 
+<<<<<<< HEAD
+=======
     public void coba(final View view, int id_kelas){
         final Context context = view.getRootView().getContext();
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -64,6 +66,7 @@ public class Kelas extends Fragment {
                         }).show();
     }
 
+>>>>>>> eab183843e5415b524c68b8c4b967c7758798a10
     class tambahKelas implements View.OnClickListener{
         @Override
         public void onClick(final View view) {
@@ -90,6 +93,7 @@ public class Kelas extends Fragment {
                                     }else{
                                         Toast.makeText(context, "Gagal menambahkan kelas.", Toast.LENGTH_SHORT).show();
                                     }
+<<<<<<< HEAD
 
                                     dialog.cancel();
                                 }
@@ -111,6 +115,29 @@ public class Kelas extends Fragment {
             final int id = this.id;
             final View view = v;
 
+=======
+
+                                    dialog.cancel();
+                                }
+
+                            }).show();
+        }
+    }
+    class OpsiDaftarKelas implements View.OnClickListener{
+        int id;
+        String namaKelas;
+        public OpsiDaftarKelas(int id, String nama){
+            this.id = id;
+            namaKelas = nama;
+        }
+        @Override
+        public void onClick(View v) {
+            final CharSequence[] items = { "Lihat Peserta", "Lihat Kelompok", "Hapus Kelas" };
+            final Context context = v.getRootView().getContext();
+            final int id = this.id;
+            final View view = v;
+
+>>>>>>> eab183843e5415b524c68b8c4b967c7758798a10
             new AlertDialog.Builder(context).setTitle("Opsi untuk kelas "+ namaKelas)
                     .setItems(items, new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int item) {
@@ -122,7 +149,10 @@ public class Kelas extends Fragment {
                                     startActivity(intent);
                                     break ;
                                 case 1 :
+<<<<<<< HEAD
+=======
 //                                    coba(view, id);
+>>>>>>> eab183843e5415b524c68b8c4b967c7758798a10
                                     break;
                                 case 2 :
                                     boolean deleteSuccessful = new ModelKelas(context).delete(id);
@@ -187,9 +217,13 @@ public class Kelas extends Fragment {
         Button tambah = (Button) view.findViewById(R.id.tambah);
         tambah.setOnClickListener(new tambahKelas());
 
+<<<<<<< HEAD
+        kelas = this;       this.v = view;
+=======
         kelas = this;
         this.v = view;
 
+>>>>>>> eab183843e5415b524c68b8c4b967c7758798a10
         load();
         return view;
     }

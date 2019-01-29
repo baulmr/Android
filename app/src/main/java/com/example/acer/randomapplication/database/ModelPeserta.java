@@ -74,9 +74,7 @@ public class ModelPeserta extends Handler {
     }
 
     public List<DataPesertaKelompok> ListByKelompok(int id_kelompok) {
-
         List<DataPesertaKelompok> recordsList = new ArrayList<DataPesertaKelompok>();
-
         String sql = "SELECT * FROM tb_peserta_kelompok " +
                 "INNER JOIN tb_peserta ON tb_peserta_kelompok.id_peserta = tb_peserta.id " +
                 "WHERE tb_peserta_kelompok.id_kelompok = "+ Integer.toString(id_kelompok);

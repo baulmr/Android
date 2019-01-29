@@ -31,9 +31,13 @@
                 android:id="@+id/list"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+<<<<<<< HEAD
+                android:orientation="vertical" />
+=======
                 android:orientation="vertical" >
 
             </LinearLayout>
+>>>>>>> eab183843e5415b524c68b8c4b967c7758798a10
         </ScrollView>
 
     </LinearLayout>

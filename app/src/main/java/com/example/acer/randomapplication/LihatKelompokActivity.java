@@ -1,5 +1,6 @@
 package com.example.acer.randomapplication;
 
+
 import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -10,11 +11,10 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.acer.randomapplication.dataObject.DataKelompok;
-import com.example.acer.randomapplication.dataObject.DataPeserta;
 import com.example.acer.randomapplication.dataObject.DataPesertaKelompok;
 import com.example.acer.randomapplication.database.ModelKelompok;
 import com.example.acer.randomapplication.database.ModelPeserta;
+
 
 import java.util.List;
 
@@ -110,10 +110,12 @@ public class LihatKelompokActivity extends AppCompatActivity {
         }
     }
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lihat_kelompok);
+
         Bundle b = getIntent().getExtras();
 
         setTitle(b.getString("judul"));
