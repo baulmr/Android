@@ -4,26 +4,39 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LihatKelompokActivity">
+    android:background="@drawable/gradient_bg"
+    tools:context=".BuatKelompok">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:padding="15dp"
         android:orientation="vertical">
 
         <Button
             android:id="@+id/Simpan"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="simpan" />
+
+            android:layout_marginBottom="17dp"
+            android:background="@drawable/btn_bg"
+            android:text="simpan"
+            android:textColor="@android:color/background_light"
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/Acak"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Acak" />
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/btn_bg"
+            android:text="acak lagi"
+            android:textColor="@android:color/background_light"
+            android:textStyle="bold" />
+
 
         <ScrollView
+            android:id="@+id/sc"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
@@ -36,6 +49,7 @@
 
             </LinearLayout>
         </ScrollView>
+
 
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

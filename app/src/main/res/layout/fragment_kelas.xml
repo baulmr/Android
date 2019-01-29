@@ -18,7 +18,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/btn_bg"
-            android:text="Add Kelas" />
+            android:text="Add Kelas"
+            android:textColor="@android:color/background_light"
+            android:textStyle="bold"/>
 
         <ScrollView
             android:layout_width="match_parent"
