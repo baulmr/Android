@@ -3,7 +3,7 @@
     package="com.example.acer.randomapplication">
     3
     <application
-        android:allowBackup="true"
+        android:allowBackup="false"
         android:icon="@drawable/iconrandom"
         android:label="Random Apps"
         android:roundIcon="@mipmap/ic_launcher_round"

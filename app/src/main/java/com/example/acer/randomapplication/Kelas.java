@@ -28,6 +28,42 @@ import java.util.List;
 public class Kelas extends Fragment {
     View v;
 
+    public void coba(final View view, int id_kelas){
+        final Context context = view.getRootView().getContext();
+        LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+
+        final View formElementsView = inflater.inflate(R.layout.modals_input_kelompok, null, false);
+        final View formTitle = inflater.inflate(R.layout.modals_title_kelompok, null, false);
+
+        final EditText judul = (EditText) formElementsView.findViewById(R.id.nama);
+        final EditText pembagi = (EditText) formElementsView.findViewById(R.id.jumlah);
+        final int kelas = id_kelas;
+
+        new AlertDialog.Builder(context)
+                .setView(formElementsView)
+                .setCustomTitle(formTitle)
+                .setPositiveButton("Buat",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                String nama = judul.getText().toString();
+                                int jumlahBagi = (pembagi.getText().toString().isEmpty() ? 0 : Integer.parseInt(pembagi.getText().toString()));
+
+                                if(nama != "" && jumlahBagi > 0){
+                                    Intent intent = new Intent(getActivity(), LihatKelompokActivity.class);
+                                    intent.putExtra("judul", nama);
+                                    intent.putExtra("pembagi", jumlahBagi);
+                                    intent.putExtra("id_kelas", kelas);
+                                    startActivity(intent);
+                                } else {
+                                    Toast.makeText(context, "Data input tidak valid !.", Toast.LENGTH_SHORT).show();
+                                }
+                                dialog.dismiss();
+
+                            }
+
+                        }).show();
+    }
+
     class tambahKelas implements View.OnClickListener{
         @Override
         public void onClick(final View view) {
@@ -86,6 +122,7 @@ public class Kelas extends Fragment {
                                     startActivity(intent);
                                     break ;
                                 case 1 :
+//                                    coba(view, id);
                                     break;
                                 case 2 :
                                     boolean deleteSuccessful = new ModelKelas(context).delete(id);
@@ -150,7 +187,9 @@ public class Kelas extends Fragment {
         Button tambah = (Button) view.findViewById(R.id.tambah);
         tambah.setOnClickListener(new tambahKelas());
 
-        kelas = this;       this.v = view;
+        kelas = this;
+        this.v = view;
+
         load();
         return view;
     }

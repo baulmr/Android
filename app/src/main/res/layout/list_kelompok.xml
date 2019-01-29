@@ -8,18 +8,27 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:orientation="horizontal"
+        android:background="@drawable/custom_border"
         android:padding="13dp">
 
         <LinearLayout
             android:layout_width="248dp"
-            android:layout_height="67dp"
+            android:layout_height="75dp"
             android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/nama_kelompok"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:textStyle="bold"
+                android:text="Nama Kelompok" />
 
             <TextView
                 android:id="@+id/Namakelas"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="15dp"
+                android:layout_marginBottom="5dp"
                 android:text="Nama Kelas" />
 
             <TextView
@@ -27,7 +36,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
-                android:text="Jumlah Kelompok" />
+                android:text="Jumlah Regu" />
 
         </LinearLayout>
 

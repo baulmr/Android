@@ -42,7 +42,7 @@ public class OpsiDaftarPeserta implements View.OnClickListener {
                                 }
                                 break;
                         }
-                        ((DaftarPesertaActivity) context).load();
+                        DaftarPesertaActivity.getInstance().load();
                         dialog.dismiss();
 
                     }
