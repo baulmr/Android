@@ -41,6 +41,7 @@ public class Handler extends SQLiteOpenHelper {
         sql = "CREATE TABLE tb_peserta_kelompok " +
                 "( id_peserta INTEGER, " +
                 "id_kelompok INTEGER, " +
+                "no_urut INTEGER, " +
                 "FOREIGN KEY(id_peserta) REFERENCES tb_peserta(id) ON DELETE CASCADE, " +
                 "FOREIGN KEY(id_kelompok) REFERENCES tb_kelompok(id) ON DELETE CASCADE  ) ";
         db.execSQL(sql);

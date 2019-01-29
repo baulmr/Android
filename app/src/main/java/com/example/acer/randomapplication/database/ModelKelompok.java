@@ -7,6 +7,7 @@ import android.database.sqlite.SQLiteDatabase;
 
 import com.example.acer.randomapplication.dataObject.DataKelompok;
 import com.example.acer.randomapplication.dataObject.DataPeserta;
+import com.example.acer.randomapplication.dataObject.DataPesertaKelompok;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -88,7 +89,7 @@ public class ModelKelompok extends Handler {
 
     }
 
-    public boolean create(DataKelompok kelompok, List<DataPeserta> data){
+    public boolean create(DataKelompok kelompok, List<DataPesertaKelompok> data){
 
         ContentValues values = new ContentValues();
 
@@ -110,17 +111,17 @@ public class ModelKelompok extends Handler {
         return createSuccessful;
     }
 
-    public boolean updateList(int id, List<DataPeserta> data){
+    public boolean updateList(int id, List<DataPesertaKelompok> data){
 
         SQLiteDatabase db = this.getWritableDatabase();
         db.delete("tb_peserta_kelompok", "id_kelompok ='" + id + "'", null);
 
         boolean add = true;
 
-        for (DataPeserta obj : data) {
+        for (DataPesertaKelompok obj : data) {
             ContentValues values = new ContentValues();
 
-            values.put("id_peserta", obj.id);
+            values.put("id_peserta", obj.id_peserta);
             values.put("id_kelompok", id);
 
             add = add && db.insert("tb_peserta_kelompok", null, values) > 0;

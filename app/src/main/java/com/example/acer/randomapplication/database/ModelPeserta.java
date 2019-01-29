@@ -7,6 +7,7 @@ import android.database.sqlite.SQLiteDatabase;
 
 import com.example.acer.randomapplication.dataObject.DataKelas;
 import com.example.acer.randomapplication.dataObject.DataPeserta;
+import com.example.acer.randomapplication.dataObject.DataPesertaKelompok;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -72,9 +73,9 @@ public class ModelPeserta extends Handler {
 
     }
 
-    public List<DataPeserta> ListByKelompok(int id_kelompok) {
+    public List<DataPesertaKelompok> ListByKelompok(int id_kelompok) {
 
-        List<DataPeserta> recordsList = new ArrayList<DataPeserta>();
+        List<DataPesertaKelompok> recordsList = new ArrayList<DataPesertaKelompok>();
 
         String sql = "SELECT * FROM tb_peserta_kelompok " +
                 "INNER JOIN tb_peserta ON tb_peserta_kelompok.id_peserta = tb_peserta.id " +
@@ -86,9 +87,10 @@ public class ModelPeserta extends Handler {
         if (cursor.moveToFirst()) {
             do {
 
-                DataPeserta peserta = new DataPeserta();
-                peserta.id = cursor.getInt(cursor.getColumnIndex("id"));
+                DataPesertaKelompok peserta = new DataPesertaKelompok();
+                peserta.id_peserta = cursor.getInt(cursor.getColumnIndex("id"));
                 peserta.nama = cursor.getString(cursor.getColumnIndex("nama"));
+                peserta.no_urut = cursor.getInt(cursor.getColumnIndex("no_urut"));
 
                 recordsList.add(peserta);
 

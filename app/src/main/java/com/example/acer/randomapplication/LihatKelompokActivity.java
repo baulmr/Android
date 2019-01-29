@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 import com.example.acer.randomapplication.dataObject.DataKelompok;
 import com.example.acer.randomapplication.dataObject.DataPeserta;
+import com.example.acer.randomapplication.dataObject.DataPesertaKelompok;
 import com.example.acer.randomapplication.database.ModelKelompok;
 import com.example.acer.randomapplication.database.ModelPeserta;
 
@@ -19,13 +20,13 @@ import java.util.List;
 
 public class LihatKelompokActivity extends AppCompatActivity {
 
-    List<DataPeserta> data;
+    List<DataPesertaKelompok> data;
     int jumlahRegu;
     int id;
 
     private void acak(){
         int randomVal, range = data.size() - 1;
-        DataPeserta tmp;
+        DataPesertaKelompok tmp;
         for(int i=0; i<data.size(); i++){
             randomVal = (int)(Math.random() * range);
             tmp = data.get(randomVal);
@@ -77,10 +78,34 @@ public class LihatKelompokActivity extends AppCompatActivity {
                 TextView item = new TextView(this);
                 item.setPadding(10, 10, 0, 0);
                 item.setText( data.get(z).nama );
+                data.get(z).no_urut = i;
                 listPeserta.addView(item);
             }
             ii = ii+jumlahNormal+kelebihan;
+            linearLayoutRecords.addView(lists);
+        }
+    }
 
+    private void tampilkanDefault(){
+        LinearLayout linearLayoutRecords = (LinearLayout) findViewById(R.id.list);
+        LayoutInflater inflater = (LayoutInflater) this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        linearLayoutRecords.removeAllViews();
+        int pos = 1;
+        int panjangData = data.size();
+        for(int i=1; i <= jumlahRegu; i++){
+            View lists = inflater.inflate(R.layout.list_coba, null, false);
+            TextView title = (TextView) lists.findViewById(R.id.title);
+            title.setText("Kelompok ke-"+ i );
+            LinearLayout listPeserta = (LinearLayout) lists.findViewById(R.id.listNama);
+            pos -= 1;
+            for(int z = pos; z < panjangData-1; z++, pos++){
+                if(data.get(z).no_urut != i)
+                    break;
+                TextView item = new TextView(this);
+                item.setPadding(10, 10, 0, 0);
+                item.setText( data.get(z).nama );
+                listPeserta.addView(item);
+            }
             linearLayoutRecords.addView(lists);
         }
     }
@@ -97,7 +122,7 @@ public class LihatKelompokActivity extends AppCompatActivity {
 
         data = new ModelPeserta(this).ListByKelompok(id);
 
-        tampilkanPeserta();
+        tampilkanDefault();
 
         Button acak = (Button) findViewById(R.id.Acak);
         acak.setOnClickListener(new acak());
@@ -105,6 +130,5 @@ public class LihatKelompokActivity extends AppCompatActivity {
         Button simpan = (Button) findViewById(R.id.Simpan);
         simpan.setOnClickListener(new simpan());
     }
-
 
 }
