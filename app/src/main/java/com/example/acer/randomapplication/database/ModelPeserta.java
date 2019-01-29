@@ -72,4 +72,36 @@ public class ModelPeserta extends Handler {
 
     }
 
+<<<<<<< HEAD
+=======
+    public List<DataPeserta> ListByKelompok(int id_kelompok) {
+
+        List<DataPeserta> recordsList = new ArrayList<DataPeserta>();
+
+        String sql = "SELECT * FROM tb_peserta_kelompok " +
+                "INNER JOIN tb_peserta ON tb_peserta_kelompok.id_peserta = tb_peserta.id " +
+                "WHERE tb_peserta_kelompok.id_kelompok = "+ Integer.toString(id_kelompok);
+
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery(sql, null);
+
+        if (cursor.moveToFirst()) {
+            do {
+
+                DataPeserta peserta = new DataPeserta();
+                peserta.id = cursor.getInt(cursor.getColumnIndex("id"));
+                peserta.nama = cursor.getString(cursor.getColumnIndex("nama"));
+
+                recordsList.add(peserta);
+
+            } while (cursor.moveToNext());
+        }
+
+        cursor.close();
+        db.close();
+
+        return recordsList;
+    }
+
+>>>>>>> eab183843e5415b524c68b8c4b967c7758798a10
 }
