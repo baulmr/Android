@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        android:padding="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_width="wrap_content"
+            android:textColor="#FF000000"
+            android:text="Nama Peserta"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/nama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:hint="Nama Peserta"
+            android:singleLine="true" >
+            <requestFocus />
+        </EditText>
+        <TextView
+            android:layout_width="wrap_content"
+            android:textColor="#FF000000"
+            android:text="Kontak Peserta"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:hint="Email Peserta"
+            android:inputType="textEmailAddress"
+            android:singleLine="true" >
+        </EditText>
+
+    </LinearLayout>
+
+</LinearLayout>

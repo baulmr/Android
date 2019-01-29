@@ -22,11 +22,9 @@ public class Splash extends AppCompatActivity {
             public void run() {
                 Intent i = new Intent(Splash.this, MainActivity.class);
                 startActivity(i);
-                this.finish();
+                finish();
             }
-            private void finish(){
 
-            }
         }, splashInterval);
     };
 }
