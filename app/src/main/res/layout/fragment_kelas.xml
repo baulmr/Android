@@ -17,10 +17,13 @@
             android:id="@+id/tambah"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
             android:background="@drawable/btn_bg"
             android:text="Add Kelas"
             android:textColor="@android:color/background_light"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
 
         <ScrollView
             android:layout_width="match_parent"

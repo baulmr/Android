@@ -24,13 +24,15 @@
             android:layout_height="379dp"
             android:layout_gravity="center_vertical|center_horizontal"
             android:layout_marginTop="40dp"
-            app:srcCompat="@drawable/iconrandom" />
+            app:srcCompat="@drawable/iconrandom2" />
 
         <ProgressBar
             android:id="@+id/progressBar"
             style="?android:attr/progressBarStyle"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:indeterminateDrawable="@drawable/progres"
+            />
     </LinearLayout>
 
 </RelativeLayout>

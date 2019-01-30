@@ -2,6 +2,7 @@ package com.example.acer.randomapplication;
 
 
 import android.content.Context;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -101,6 +102,7 @@ public class LihatKelompokActivity extends AppCompatActivity {
                 TextView item = new TextView(this);
                 item.setPadding(10, 10, 0, 0);
                 item.setText( data.get(z).nama );
+                item.setTextColor(Color.WHITE);
                 data.get(z).no_urut = i;
                 listPeserta.addView(item);
             }
@@ -130,6 +132,7 @@ public class LihatKelompokActivity extends AppCompatActivity {
                 TextView item = new TextView(this);
                 item.setPadding(10, 10, 0, 0);
                 item.setText( data.get(z).nama );
+                item.setTextColor(Color.WHITE);
                 listPeserta.addView(item);
 
 

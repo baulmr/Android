@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="@dimen/nav_header_height"
-    android:background="@drawable/gradient_bg"
+    android:background="#2c6eab"
     android:gravity="bottom"
     android:orientation="vertical"
     android:paddingLeft="@dimen/activity_horizontal_margin"
@@ -19,6 +19,6 @@
         android:layout_height="111dp"
         android:layout_marginBottom="10dp"
         android:contentDescription="@string/nav_header_desc"
-        app:srcCompat="@drawable/iconrandom" />
+        app:srcCompat="@drawable/iconrandom2" />
 
 </LinearLayout>

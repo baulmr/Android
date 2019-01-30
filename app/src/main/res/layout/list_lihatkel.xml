@@ -15,7 +15,7 @@
             android:id="@+id/title"
             android:layout_width="wrap_content"
             android:text="Urutan Kelompok"
-            android:textColor="#ff000000"
+            android:textColor="#f9f8f8"
             android:textStyle="bold"
             android:fontFamily="serif"
             android:layout_marginBottom="10dp"

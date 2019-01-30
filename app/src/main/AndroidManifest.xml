@@ -4,7 +4,7 @@
     3
     <application
         android:allowBackup="false"
-        android:icon="@drawable/iconrandom"
+        android:icon="@drawable/iconrandom2"
         android:label="Random Apps"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"

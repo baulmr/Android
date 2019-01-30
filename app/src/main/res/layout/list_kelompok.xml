@@ -22,6 +22,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
                 android:text="Nama Kelompok"
+                android:textColor="@android:color/background_light"
                 android:textStyle="bold" />
 
             <TextView
@@ -29,6 +30,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
+                android:textColor="@android:color/background_light"
                 android:text="Nama Kelas" />
 
             <TextView
@@ -36,11 +38,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
+                android:textColor="@android:color/background_light"
                 android:text="Jumlah Regu" />
 
         </LinearLayout>
 
         <Button
+            android:textColor="@android:color/background_light"
+            android:background="@drawable/btn_bg"
             android:id="@+id/Pilih"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

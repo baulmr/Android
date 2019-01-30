@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient_bg">
+>
 
 
     <LinearLayout
@@ -15,7 +15,7 @@
             android:layout_width="wrap_content"
             android:text="Nama Peserta"
             android:layout_height="wrap_content"
-            android:textColor="@android:color/background_light"
+            android:textColor="#ff000000"
             android:textStyle="bold"/>
         <EditText
             android:id="@+id/nama"
@@ -31,7 +31,7 @@
             android:layout_width="wrap_content"
             android:text="Kontak Peserta"
             android:layout_height="wrap_content"
-            android:textColor="@android:color/background_light"
+            android:textColor="#ff000000"
             android:textStyle="bold"/>
         <EditText
             android:id="@+id/email"
