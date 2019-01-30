@@ -16,15 +16,7 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="@drawable/gradient_bg" >
-
-            <!--<TextView-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:text="Random Apps"-->
-                <!--android:textColor="@android:color/white"-->
-                <!--style="@style/Base.TextAppearance.AppCompat.Widget.ActionBar.Title"/>-->
-
+            app:titleTextColor="#ffff" >
         </android.support.v7.widget.Toolbar>
 
 

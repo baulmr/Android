@@ -11,6 +11,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.acer.randomapplication.dataObject.DataPeserta;
 import com.example.acer.randomapplication.dataObject.DataPesertaKelompok;
 import com.example.acer.randomapplication.database.ModelKelompok;
 import com.example.acer.randomapplication.database.ModelPeserta;
@@ -23,6 +24,7 @@ public class LihatKelompokActivity extends AppCompatActivity {
     List<DataPesertaKelompok> data;
     int jumlahRegu;
     int id;
+    int id_kelas;
 
     private void acak(){
         int randomVal, range = data.size() - 1;
@@ -56,6 +58,27 @@ public class LihatKelompokActivity extends AppCompatActivity {
             } else {
                 Toast.makeText(context, "Gagal menyimpan perubahan.", Toast.LENGTH_SHORT).show();
             }
+        }
+    }
+
+    class sesuaikan implements View.OnClickListener{
+
+        @Override
+        public void onClick(View v) {
+            setData();
+            acak();
+            tampilkanPeserta();
+        }
+    }
+
+    private void setData(){
+        data.clear();
+        List<DataPeserta> peserta = new ModelPeserta(this).read(id_kelas);
+        for (DataPeserta obj : peserta) {
+            DataPesertaKelompok baru = new DataPesertaKelompok();
+            baru.id_peserta = obj.id;
+            baru.nama = obj.nama;
+            data.add(baru);
         }
     }
 
@@ -125,6 +148,7 @@ public class LihatKelompokActivity extends AppCompatActivity {
         setTitle(b.getString("judul"));
         jumlahRegu = b.getInt("pembagi");
         id = b.getInt("id_kelompok");
+        id_kelas = b.getInt("id_kelas");
 
         data = new ModelPeserta(this).ListByKelompok(id);
 
@@ -135,6 +159,9 @@ public class LihatKelompokActivity extends AppCompatActivity {
 
         Button simpan = (Button) findViewById(R.id.Simpan);
         simpan.setOnClickListener(new simpan());
+
+        Button sesuikan = (Button) findViewById(R.id.Sesuaikan);
+        sesuikan.setOnClickListener(new sesuaikan());
     }
 
 }

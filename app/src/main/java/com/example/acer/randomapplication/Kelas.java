@@ -35,13 +35,12 @@ public class Kelas extends Fragment {
             LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
             final View formElementsView = inflater.inflate(R.layout.modals_input_kelas, null, false);
-            final View formTitle = inflater.inflate(R.layout.modals_title_kelas, null, false);
 
             final EditText nama = (EditText) formElementsView.findViewById(R.id.nama);
 
             new AlertDialog.Builder(context)
                     .setView(formElementsView)
-                    .setCustomTitle(formTitle)
+                    .setCustomTitle(Modals.getTitle(inflater, "Tambah Kelas"))
                     .setPositiveButton("Simpan",
                             new DialogInterface.OnClickListener() {
                                 public void onClick(DialogInterface dialog, int id) {

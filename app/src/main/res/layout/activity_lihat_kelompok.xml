@@ -11,17 +11,29 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/Acak"
+                android:layout_width="0dp"
+                android:layout_weight=".5"
+                android:layout_height="wrap_content"
+                android:text="Acak" />
+            <Button
+                android:id="@+id/Sesuaikan"
+                android:layout_width="0dp"
+                android:layout_weight=".5"
+                android:layout_height="wrap_content"
+                android:text="Sesuaikan" />
+        </LinearLayout>
+
         <Button
             android:id="@+id/Simpan"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="simpan" />
-
-        <Button
-            android:id="@+id/Acak"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Acak" />
 
         <ScrollView
             android:layout_width="match_parent"

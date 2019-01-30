@@ -30,13 +30,14 @@ public class Kelompok extends Fragment {
 
     class opsiDaftarKelompok implements View.OnClickListener{
 
-        int id, jumlahRegu;
+        int id, jumlahRegu, id_kelas;
         String nama;
 
-        public opsiDaftarKelompok(int id, String nama, int jumlahRegu){
+        public opsiDaftarKelompok(int id, String nama, int jumlahRegu, int id_kelas){
             this.id = id;
             this.nama = nama;
             this.jumlahRegu = jumlahRegu;
+            this.id_kelas = id_kelas;
         }
 
         @Override
@@ -55,6 +56,7 @@ public class Kelompok extends Fragment {
                         intent.putExtra("judul", nama);
                         intent.putExtra("pembagi", jumlahRegu);
                         intent.putExtra("id_kelompok", id);
+                        intent.putExtra("id_kelas", id_kelas);
                         startActivity(intent);
                         break ;
                     case 1 :
@@ -95,7 +97,7 @@ public class Kelompok extends Fragment {
                 namaKelompok.setText(obj.nama);
                 namaKelas.setText(obj.nama_kelas);
                 jumlahRegu.setText(Integer.toString(obj.jumlahKelompok)+ " Regu");
-                pilih.setOnClickListener(new opsiDaftarKelompok(obj.id, obj.nama, obj.id_kelas));
+                pilih.setOnClickListener(new opsiDaftarKelompok(obj.id, obj.nama, obj.jumlahKelompok, obj.id_kelas));
 
                 linearLayoutRecords.addView(lists);
             }

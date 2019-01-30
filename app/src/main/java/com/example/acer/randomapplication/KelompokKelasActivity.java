@@ -58,6 +58,7 @@ public class KelompokKelasActivity extends AppCompatActivity {
                                     intent.putExtra("judul", nama);
                                     intent.putExtra("pembagi", jumlahRegu);
                                     intent.putExtra("id_kelompok", id);
+                                    intent.putExtra("id_kelas", id_kelas);
                                     startActivity(intent);
                                     break ;
                                 case 1 :
@@ -84,14 +85,13 @@ public class KelompokKelasActivity extends AppCompatActivity {
             LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
             final View formElementsView = inflater.inflate(R.layout.modals_input_kelompok, null, false);
-            final View formTitle = inflater.inflate(R.layout.modals_title_kelompok, null, false);
 
             final EditText judul = (EditText) formElementsView.findViewById(R.id.nama);
             final EditText pembagi = (EditText) formElementsView.findViewById(R.id.jumlah);
 
             new AlertDialog.Builder(context)
                     .setView(formElementsView)
-                    .setCustomTitle(formTitle)
+                    .setCustomTitle(Modals.getTitle(inflater, "Tambah Kelompok"))
                     .setPositiveButton("Buat",
                             new DialogInterface.OnClickListener() {
                                 public void onClick(DialogInterface dialog, int id) {
@@ -130,7 +130,7 @@ public class KelompokKelasActivity extends AppCompatActivity {
 
                 namaKelompok.setText(obj.nama);
                 jumlahRegu.setText(Integer.toString(obj.jumlahKelompok)+ " Regu");
-                pilih.setOnClickListener(new opsiDaftarKelompok(obj.id, obj.nama, obj.id_kelas));
+                pilih.setOnClickListener(new opsiDaftarKelompok(obj.id, obj.nama, obj.jumlahKelompok));
 
                 linearLayoutRecords.addView(lists);
             }

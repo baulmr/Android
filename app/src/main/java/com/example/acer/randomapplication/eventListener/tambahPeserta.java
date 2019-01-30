@@ -9,6 +9,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.acer.randomapplication.DaftarPesertaActivity;
+import com.example.acer.randomapplication.Modals;
 import com.example.acer.randomapplication.R;
 import com.example.acer.randomapplication.dataObject.DataPeserta;
 import com.example.acer.randomapplication.database.ModelKelas;
@@ -28,16 +29,14 @@ public class tambahPeserta implements View.OnClickListener {
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
         final View formElementsView = inflater.inflate(R.layout.modals_input_peserta, null, false);
-        final View formTitle = inflater.inflate(R.layout.modals_title_peserta, null, false);
 
         final EditText nama = (EditText) formElementsView.findViewById(R.id.nama);
         final EditText email = (EditText) formElementsView.findViewById(R.id.email);
         final int id_kelas = this.id_kelas;
 
         new AlertDialog.Builder(context)
-                .setCustomTitle(formTitle)
+                .setCustomTitle(Modals.getTitle(inflater, "Tambah Peserta"))
                 .setView(formElementsView)
-                .setCustomTitle(formTitle)
                 .setPositiveButton("Simpan",
                         new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int id) {
